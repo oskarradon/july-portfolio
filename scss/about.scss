@@ -1,0 +1,21 @@
+@import '_vendor/normalize';
+@import '_partials/global';
+
+main {
+	margin: 0 10px;
+}
+
+p {
+	padding-right: 30px;
+	max-width: 300px;
+	@media (min-width: $phone-width) {
+		max-width: none;
+		width: 560px;
+	}
+}
+
+.about-img {
+	background: #98D1D1;
+	width: calc( 100vw - 40px);
+	height: calc(calc( 100vw - 40px ) * 1.5);
+}
