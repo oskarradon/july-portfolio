@@ -2,6 +2,7 @@ body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	margin: 0px;
 	padding: 0px;
+	overflow: hidden;
 }
 
 header {
@@ -23,14 +24,13 @@ header {
 }
 
 main {
-	margin: 0px;
+	margin: 0 auto;
+	padding: 0 10px;
 	width: 100vw;
 	min-height: 100vh;
-	padding: 10px;
-	overflow: hidden;
 }
 
-$project-size : calc( 50vw - 20px);
+$project-size : calc( 50vw - 30px);
 
 .project {
 	background: #98D1D1;
