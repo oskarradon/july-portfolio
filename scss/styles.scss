@@ -1,21 +1,27 @@
+$phone-width : 500px;
+$project-size : calc( 50vw - 30px);
+
 body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	margin: 0px;
 	padding: 0px;
-	overflow: hidden;
 }
 
 header {
 	margin: 30px 20px;
+	& > * {
+		font-size: 16px;
+		@media (min-width: $phone-width) {
+			font-size: 20px;
+		}
+	}
 	h1 {
-		font-size: 20px;
 		font-style: italic;
 		font-weight: normal;
 	}
 	nav a {
 		margin-right: 20px;
 		font-weight: bold;
-		font-size: 20px;
 		text-decoration: none;
 		&:visited {
 			color: black;
@@ -30,12 +36,21 @@ main {
 	min-height: 100vh;
 }
 
-$project-size : calc( 50vw - 30px);
-
 .project {
-	background: #98D1D1;
 	width: $project-size;
-	height: $project-size;
 	float: left;
 	margin:  0 10px 20px;
+	.project-image {
+		background: #98D1D1;
+		width: $project-size;
+		height: $project-size;
+	}
+	.title {
+		font-weight: normal;
+		font-size: 16px;
+		@media (min-width: $phone-width) {
+			font-size: 20px;
+		}
+	}
 }
+
