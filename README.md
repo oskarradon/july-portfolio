@@ -4,7 +4,14 @@ I figured my portfolio needed a redesign and my projects needed more description
 ## Technologies Used
 Jade, SCSS, Greensock, Gulp & Node
 
-Some cool features:
+## Setup
+ 1. First make sure you have node and gulp installed `node -v` and `gulp -v` and if necessary install em!
+ 2. Then download or clone this repository and navigate to it, for example `cd Sites/july-portfolio`
+ 3. Install the node modules: `npm install`
+ 4. Run the gulp task: `gulp`
+ 5. The site should open in your browser! If you have any questions or if anything is broken, [email me](mailto:hi@oskarradon.com)! 
+
+## Some cool features:
  - Flexbox-free grid layout on the main page, accomplished using float:left and calculating the width based on % values
  - Greensock animation, hopefully to inform and make UX novel/exciting
  - Probably going to refactor it to not use jQuery!
