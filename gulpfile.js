@@ -76,4 +76,4 @@ gulp.task('browser-sync', function() {
 });
 
 // Default task
-gulp.task('serve', ['css', 'jade', 'cleanJs', 'js', 'watch', 'browser-sync']);
+gulp.task('default', ['css', 'jade', 'cleanJs', 'js', 'watch', 'browser-sync']);
