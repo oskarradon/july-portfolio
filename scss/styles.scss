@@ -1,10 +1,17 @@
-$phone-width : 500px;
+$phone-width  : 660px;
+$tablet-width : 960px;
 $project-size : calc( 50vw - 30px);
 
 body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
-	margin: 0px;
+	margin: 0px auto;
 	padding: 0px;
+	@media (min-width: $phone-width) {
+		width: $phone-width;
+	}
+	@media (min-width: $tablet-width) {
+		width: $tablet-width;
+	}
 }
 
 header {
@@ -32,27 +39,29 @@ header {
 main {
 	margin: 0 auto;
 	padding: 0 10px;
-	width: 100vw;
+	width: 100%;
 	min-height: 100vh;
 }
 
 .project {
 	width: $project-size;
+	max-width: 300px;
 	float: left;
 	margin:  0 10px 20px;
 	.project-image {
 		background: #98D1D1;
 		width: $project-size;
 		height: $project-size;
+		max-width: 300px;
+		max-height: 300px;
 	}
 	.title {
-		height: 3em;
+		height: 2em;
 		margin-bottom: 0px;
 		font-weight: normal;
 		font-size: 16px;
 		@media (min-width: $phone-width) {
 			font-size: 20px;
-			height: 2em;
 		}
 	}
 }
