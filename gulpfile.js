@@ -47,7 +47,7 @@ gulp.task('cleanJs', function() {
 });
 
 gulp.task('js', function() {
-    return gulp.src('js/*')
+    return gulp.src('js/scripts.js')
         // Minify JS
         .pipe(uglify())
         .pipe(concat('scripts.min.js'))
