@@ -3,13 +3,13 @@ html
 		title Oskar Radon
 		link(rel="stylesheet" href="css/styles.css" type="text/css")
 	body
-		div.slider
 		header
 			h1 OSKAR RADON
 			nav
-				a(href="about.html") ABOUT
-				a(href="index.html") WORK
-				a(href="contact.html") CONTACT
+				div.slider
+				a.about(href="about.html") ABOUT
+				a.work(href="/") WORK
+				a.contact(href="contact.html") CONTACT
 		main
 			a(href="sarah-meadows.html")
 				div.project
@@ -34,4 +34,6 @@ html
 				
 		footer
 			script(type="text/javascript" src="js/jquery-1.12.4.min.js")
+			script(type="text/javascript" src="js/TweenMax.min.js")
 			script(type="text/javascript" src="js/scripts.js")
+			
