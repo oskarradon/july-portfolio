@@ -60,7 +60,7 @@ gulp.task('watch', ['browser-sync'], function() {
   // Watch HTML files
   gulp.watch('*.html', reload);
   // Watch Sass files
-  gulp.watch('scss/**/*', ['css']);
+  gulp.watch('scss/**/*', ['css', reload]);
   // Watch jade files
   gulp.watch('*.jade', ['jade']);
   // Watch JS files
