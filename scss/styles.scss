@@ -1,0 +1,16 @@
+main {
+	width: 100vw;
+	min-height: 100vh;
+	padding: 10px;
+	overflow: hidden;
+}
+
+$project-size : calc( 50vw - 20px);
+
+.project {
+	background: #98D1D1;
+	width: $project-size;
+	height: $project-size;
+	float: left;
+	margin: 10px;
+}
