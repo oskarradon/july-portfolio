@@ -1,48 +1,5 @@
-$phone-width  : 660px;
-$tablet-width : 960px;
-$project-size : calc( 50vw - 30px);
-
-body {
-	font-family: 'Helvetica Neue', 'Arial', sans-serif;
-	margin: 0px auto;
-	padding: 0px;
-	@media (min-width: $phone-width) {
-		width: $phone-width;
-	}
-	@media (min-width: $tablet-width) {
-		width: $tablet-width;
-	}
-}
-
-a {
-	color: black;
-	&:visited {
-		color: black;
-	}
-}
-
-header {
-	margin: 30px 20px;
-	& > * {
-		font-size: 20px;
-	}
-	h1 {
-		font-style: italic;
-		font-weight: normal;
-	}
-	nav a {
-		margin-right: 20px;
-		font-weight: bold;
-		text-decoration: none;
-	}
-}
-
-main {
-	margin: 0 auto;
-	padding: 0 10px;
-	width: 100%;
-	min-height: 100vh;
-}
+@import '_vendor/normalize';
+@import '_partials/global';
 
 .project {
 	width: $project-size;
@@ -65,11 +22,4 @@ main {
 			font-size: 20px;
 		}
 	}
-}
-
-.slider {
-	z-index: -99;
-	height: 4px;
-	position: absolute;
-	margin: 24px 0 0 0;
 }
