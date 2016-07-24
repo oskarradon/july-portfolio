@@ -46,10 +46,13 @@ main {
 		height: $project-size;
 	}
 	.title {
+		height: 3em;
+		margin-bottom: 0px;
 		font-weight: normal;
 		font-size: 16px;
 		@media (min-width: $phone-width) {
 			font-size: 20px;
+			height: 2em;
 		}
 	}
 }
