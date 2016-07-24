@@ -1,6 +1,12 @@
 @import '_vendor/normalize';
 @import '_partials/global';
 
+body {
+	@media (min-width: $tablet-width) {
+		width: $tablet-width;
+	}
+}
+
 .project {
 	width: $project-size;
 	max-width: 300px;

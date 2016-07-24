@@ -9,9 +9,9 @@ body {
 	@media (min-width: $phone-width) {
 		width: $phone-width;
 	}
-	@media (min-width: $tablet-width) {
-		width: $tablet-width;
-	}
+	// @media (min-width: $tablet-width) {
+	// 	width: $tablet-width;
+	// }
 }
 
 a {
