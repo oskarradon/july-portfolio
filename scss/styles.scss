@@ -1,4 +1,29 @@
+body {
+	font-family: 'Helvetica Neue', 'Arial', sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	margin: 30px 20px;
+	h1 {
+		font-size: 20px;
+		font-style: italic;
+		font-weight: normal;
+	}
+	nav a {
+		margin-right: 20px;
+		font-weight: bold;
+		font-size: 20px;
+		text-decoration: none;
+		&:visited {
+			color: black;
+		}
+	}
+}
+
 main {
+	margin: 0px;
 	width: 100vw;
 	min-height: 100vh;
 	padding: 10px;
@@ -12,5 +37,5 @@ $project-size : calc( 50vw - 20px);
 	width: $project-size;
 	height: $project-size;
 	float: left;
-	margin: 10px;
+	margin:  0 10px 20px;
 }
