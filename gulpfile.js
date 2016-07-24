@@ -29,9 +29,9 @@ gulp.task('jade', function() {
 
 // CSS tasks
 gulp.task('css', function() {
-  return gulp.src('scss/**/*')
+  return gulp.src('scss/*.scss')
     // Compile Sass
-    .pipe(sass({ style: 'compressed', noCache: true }))
+    .pipe(sass({ style: 'compressed', noCache: true, includePaths: ['scss/_partials/', 'scss/_vendor/'] }))
     // parse CSS and add vendor-prefixed CSS properties
     .pipe(autoprefixer())
     // Minify CSS
