@@ -20,9 +20,9 @@ $(function() {
 	// Animate nav slider based on current page
 	function setSlider() {
 		var pathname = window.location.pathname;
-		if (pathname === 'about.html') {
+		if (pathname === '/about.html') {
 			sliderAbout();
-		} else if (pathname === 'contact.html') {
+		} else if (pathname === '/contact.html') {
 			sliderContact();
 		} else {
 			sliderWork();
