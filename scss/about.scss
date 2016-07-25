@@ -7,15 +7,21 @@ main {
 
 p {
 	padding-right: 30px;
-	max-width: 300px;
 	@media (min-width: $phone-width) {
-		max-width: none;
-		width: 560px;
+		float: left;
+		width: 300px;
 	}
 }
 
+
 .about-img {
-	background: #98D1D1;
+	background: url("../img/about-small.jpg") no-repeat;
+	background-size: contain;
 	width: calc( 100vw - 40px);
 	height: calc(calc( 100vw - 40px ) * 1.5);
+	@media (min-width: 550px) {
+		float: right;
+		max-width: 300px;
+		max-height: 450px;
+	}
 }
