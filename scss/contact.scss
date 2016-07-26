@@ -8,11 +8,11 @@ a {
 .email {
 	margin-top: 80px;
 	text-align: center;
-	&:hover {
-		color: white;
-		background: #7AD1D1;
-		transition: .2s;
-	}
+}
+
+.hey {
+	width: 60px;
+	// opacity: 0;
 }
 
 .icons {
