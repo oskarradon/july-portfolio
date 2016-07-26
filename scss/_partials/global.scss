@@ -8,9 +8,11 @@ body {
 	padding: 0px;
 	@media (min-width: $phone-width) {
 		width: $phone-width;
+		transition: .5s;
 	}
 	@media (min-width: $tablet-width) {
 		width: $tablet-width;
+		transition: .5s;
 	}
 }
 
