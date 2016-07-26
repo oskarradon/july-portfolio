@@ -7,10 +7,18 @@ main {
 
 p {
 	padding-right: 30px;
+	min-width: 300px;
+	max-width: 70vw;
 	@media (min-width: $phone-width) {
 		float: left;
 		width: 300px;
 	}
+}
+
+.lead {
+	@media (min-width: $phone-width) {
+		margin: 60px 0 0;
+	} 
 }
 
 
@@ -19,9 +27,15 @@ p {
 	background-size: contain;
 	width: calc( 100vw - 40px);
 	height: calc(calc( 100vw - 40px ) * 1.5);
-	@media (min-width: 550px) {
+	@media (min-width: $phone-width) {
 		float: right;
 		max-width: 300px;
 		max-height: 450px;
+	}
+	@media (min-width: $tablet-width) {
+		max-width: 600px;
+		max-height: 600px;
+		background-size: cover;
+		background-position: center;
 	}
 }
