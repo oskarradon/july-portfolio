@@ -13,5 +13,5 @@ Jade, SCSS, Greensock, Gulp & Node
 
 ## Some cool features:
  - Flexbox-free grid layout on the main page, accomplished using float:left and calculating the width based on % values
- - Greensock animation, hopefully to inform and make UX novel/exciting
+ - Greensock animation
  - Probably going to refactor it to not use jQuery!
