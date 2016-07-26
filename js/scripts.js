@@ -4,17 +4,17 @@ $(function() {
 	var slider = $('.slider');
 	var easing = Power4.easeOut;
 
-	var colorRed = '#FFEF4F';
-	var colorYellow = '#FF4747';
+	var colorRed = '#FF4747';
+	var colorYellow = '#FFEF4F';
 	var colorBlue = '#7AD1D1';
 
 	// Slider animations
 	function sliderAbout() {
-		TweenMax.to(slider, animationDuration, {ease: easing, backgroundColor: colorRed, width: '72px', marginLeft:-1});
+		TweenMax.to(slider, animationDuration, {ease: easing, backgroundColor: colorYellow, width: '72px', marginLeft:-1});
 	}
 
 	function sliderWork() {
-		TweenMax.to(slider, animationDuration, {ease: easing, backgroundColor: colorYellow, width: '64px', marginLeft:91});
+		TweenMax.to(slider, animationDuration, {ease: easing, backgroundColor: colorRed, width: '64px', marginLeft:91});
 	}
 
 	function sliderContact() {
