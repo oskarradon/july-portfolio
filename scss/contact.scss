@@ -1,2 +1,36 @@
 @import '_vendor/normalize';
 @import '_partials/global';
+
+a {
+	text-decoration: none;
+}
+
+.email {
+	margin-top: 80px;
+	text-align: center;
+	&:hover {
+		color: white;
+		background: #7AD1D1;
+		transition: .2s;
+	}
+}
+
+.icons {
+	width: 300px;
+	text-align: center;
+	margin: 40px auto;
+	a {
+		&:hover .caption {
+			opacity: 1;
+			transition: 300ms;
+		}
+		float: left;
+		margin: 0 20px;
+		img {
+			width: 50px;
+		}
+		.caption {
+			opacity: 0;
+		}
+	}
+}
