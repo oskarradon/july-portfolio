@@ -6,6 +6,10 @@
 	max-width: 300px;
 	float: left;
 	margin:  0 10px 20px;
+	&:hover .title {
+		color: #FF4747;
+		transition: .2s;
+	}
 	.project-image {
 		background: #98D1D1;
 		width: $project-size;
@@ -18,8 +22,10 @@
 		margin-bottom: 0px;
 		font-weight: normal;
 		font-size: 16px;
+		position: relative;
 		@media (min-width: $phone-width) {
 			font-size: 20px;
 		}
 	}
 }
+
