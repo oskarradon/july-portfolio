@@ -2,6 +2,11 @@ $phone-width  : 660px;
 $tablet-width : 960px;
 $project-size : calc( 50vw - 30px);
 
+$color-red    : #FF4747;
+$color-yellow : #FFEF4F;
+$color-blue   : #7AD1D1;
+
+
 body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	margin: 0px auto;
@@ -18,8 +23,17 @@ body {
 
 a {
 	color: black;
+	text-decoration: none;
 	&:visited {
 		color: black;
+	}
+}
+
+p a {
+	color: $color-red;
+	&:hover, &:active {
+		color: $color-blue;
+		transition: .5s;
 	}
 }
 
