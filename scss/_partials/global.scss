@@ -1,6 +1,6 @@
 $phone-width  : 660px;
 $tablet-width : 960px;
-$project-size : calc( 50vw - 30px);
+$project-size : calc( 50vw - 40px);
 
 $color-red    : #FF4747;
 $color-yellow : #FFEF4F;
@@ -10,7 +10,7 @@ $color-blue   : #7AD1D1;
 body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	margin: 0px auto;
-	padding: 0px;
+	padding: 0 20px;
 	@media (min-width: $phone-width) {
 		width: $phone-width;
 		transition: .5s;
@@ -38,7 +38,7 @@ p a {
 }
 
 header {
-	margin: 30px 20px;
+	margin: 30px 0px;
 	& > * {
 		font-size: 20px;
 	}
@@ -55,7 +55,7 @@ header {
 
 main {
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0px;
 	min-height: 50vh;
 }
 
