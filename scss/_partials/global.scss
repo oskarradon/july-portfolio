@@ -1,6 +1,5 @@
 $phone-width  : 660px;
 $tablet-width : 960px;
-$project-size : calc( 50vw - 40px);
 
 $color-red    : #FF4747;
 $color-yellow : #FFEF4F;
@@ -68,4 +67,9 @@ main {
 
 @-ms-viewport {
   width: device-width;
+}
+
+footer {
+	width: 100%;
+	height: 80px;
 }
