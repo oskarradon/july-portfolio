@@ -1,6 +1,8 @@
 @import '_vendor/normalize';
 @import '_partials/global';
 
+$project-size : calc( 50vw - 40px);
+
 main:nth-child(even) .project {
 	margin-right: 20px;
 }
