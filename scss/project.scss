@@ -1,0 +1,22 @@
+@import '_vendor/normalize';
+@import '_partials/global';
+
+.main-img {
+	background: #98D1D1;
+	margin: 0px;
+	width: calc(100vw - 40px);
+	height: calc(calc( 100vw - 40px ) * .711111);
+	@media (min-width: $phone-width) {
+		width: 645px;
+		height: 455px;
+	}
+	@media (min-width: $tablet-width) {
+		width: 945px;
+		height: 613px;
+	}
+}
+
+main {
+	padding: 0 20px;
+	width: auto;
+}
