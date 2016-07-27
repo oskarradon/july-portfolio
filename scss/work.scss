@@ -1,11 +1,14 @@
 @import '_vendor/normalize';
 @import '_partials/global';
 
+main:nth-child(even) .project {
+	margin-right: 20px;
+}
 .project {
 	width: $project-size;
 	max-width: 300px;
 	float: left;
-	margin:  0 10px 20px;
+	margin: 0 0 20px;
 	&:hover .title {
 		color: #FF4747;
 		transition: .2s;
