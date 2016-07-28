@@ -12,6 +12,6 @@ Jade, SCSS, Greensock, Gulp & Node
  5. The site should open in your browser! If you have any questions or if anything is broken, [email me](mailto:hi@oskarradon.com)! 
 
 ## Some cool features:
- - Flexbox-free grid layout on the main page, accomplished using float:left and calculating the width based on % values
+ - Flexbox
  - Greensock animation
  - Probably going to refactor it to not use jQuery!
