@@ -34,16 +34,17 @@ gulp.task('jade', function() {
 gulp.task('css', function() {
 	return gulp.src(['src/scss/**/*.scss', '!src/scss/_/**/*.scss'])
 	// .pipe(sourcemaps.init())
-	.pipe(sass({ style: 'compressed', 
+	.pipe(sass({ 
+		style: 'compressed', 
 		noCache: true,
-		includePaths: 
-			[neat, 'src/scss/_/' ]}))
+		includePaths: [neat, 'src/scss/_/' ]
+	}))
 	// .pipe(sourcemaps.write())
 	.pipe(autoprefixer())
 	.pipe(cssmin())
 	.pipe(rename({
-				suffix: '.min'
-		}))
+		suffix: '.min'
+	}))
 	.pipe(gulp.dest('dist/css'))
 });
 
