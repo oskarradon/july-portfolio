@@ -1,13 +1,18 @@
 @import '_vendor/normalize';
 @import '_partials/global';
 
-$project-size : calc( 50vw - 40px);
+$project-sm : calc( 50vw - 30px);
 
-main:nth-child(even) .project {
-	margin-right: 20px;
+main {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0 auto;
 }
+
 .project {
-	width: $project-size;
+	width: $project-sm;
 	max-width: 300px;
 	float: left;
 	margin: 0 0 20px;
@@ -17,8 +22,8 @@ main:nth-child(even) .project {
 	}
 	.project-image {
 		background: #98D1D1;
-		width: $project-size;
-		height: $project-size;
+		width: $project-sm;
+		height: $project-sm;
 		max-width: 300px;
 		max-height: 300px;
 	}

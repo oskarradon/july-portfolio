@@ -16,7 +16,7 @@
 	}
 }
 
-.small-img {
+.medium-img {
 	background: #98D1D1;
 	margin: 0px auto 60px;
 	width: calc(50vw - 40px);
@@ -25,6 +25,11 @@
 		width: 640px;
 		height: 449px;
 	}
+}
+
+.small-img {
+	width: 180px;
+	height: 360px;
 }
 
 .phone-img {

@@ -6,6 +6,7 @@
 var gulp                    = require('gulp');
 var jade                    = require('gulp-jade');
 var sass                    = require('gulp-sass');
+var sourcemaps              = require('gulp-sourcemaps');
 var autoprefixer            = require('gulp-autoprefixer');
 var cssmin                  = require('gulp-cssmin');
 var concat                  = require('gulp-concat');
@@ -30,13 +31,11 @@ gulp.task('jade', function() {
 // CSS tasks
 gulp.task('css', function() {
   return gulp.src('scss/*.scss')
-    // Compile Sass
+    .pipe(sourcemaps.init())
     .pipe(sass({ style: 'compressed', noCache: true, includePaths: ['scss/_partials/', 'scss/_vendor/'] }))
-    // parse CSS and add vendor-prefixed CSS properties
+    .pipe(sourcemaps.write())
     .pipe(autoprefixer())
-    // Minify CSS
     .pipe(cssmin())
-    // Where to store the finalized CSS
     .pipe(gulp.dest('css'))
 });
 
