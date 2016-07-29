@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------------
-// GET THINGS SET UP
+// VARIABLES
 // -------------------------------------------------------------------------
 
 
@@ -9,70 +9,70 @@ var sass                    = require('gulp-sass');
 var sourcemaps              = require('gulp-sourcemaps');
 var autoprefixer            = require('gulp-autoprefixer');
 var cssmin                  = require('gulp-cssmin');
+var neat                    = require('node-neat').includePaths;
 var concat                  = require('gulp-concat');
 var uglify                  = require('gulp-uglify');
-var del                     = require('del');
+var rename					        = require('gulp-rename');
 var browserSync             = require('browser-sync');
 var reload                  = browserSync.reload;
+
+
 
 // -------------------------------------------------------------------------
 // TASKS
 // -------------------------------------------------------------------------
 
 
-// Jade tasks
+// Jade task
 gulp.task('jade', function() {
-  return gulp.src('*.jade')
-    .pipe(jade({ pretty: true }))
-    .pipe(gulp.dest(''))
+	return gulp.src('src/jade/**/*.jade')
+	.pipe(jade({ pretty: true }))
+	.pipe(gulp.dest('dist/'))
 });
 
-
-// CSS tasks
+// CSS task
 gulp.task('css', function() {
-  return gulp.src('scss/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({ style: 'compressed', noCache: true, includePaths: ['scss/_partials/', 'scss/_vendor/'] }))
-    .pipe(sourcemaps.write())
-    .pipe(autoprefixer())
-    .pipe(cssmin())
-    .pipe(gulp.dest('css'))
+	return gulp.src(['src/scss/**/*.scss', '!src/scss/_/**/*.scss'])
+	// .pipe(sourcemaps.init())
+	.pipe(sass({ style: 'compressed', 
+		noCache: true,
+		includePaths: 
+			[neat, 'src/scss/_/' ]}))
+	// .pipe(sourcemaps.write())
+	.pipe(autoprefixer())
+	.pipe(cssmin())
+	.pipe(rename({
+				suffix: '.min'
+		}))
+	.pipe(gulp.dest('dist/css'))
 });
 
-// JS tasks
-gulp.task('cleanJs', function() {
-  // Delete minified scripts
-  del(['js/scripts.min.js']);
-});
-
+// JS task
 gulp.task('js', function() {
-    return gulp.src('js/scripts.js')
-        // Minify JS
-        .pipe(uglify())
-        .pipe(concat('scripts.min.js'))
-        // Where to store the finalized JS
-        .pipe(gulp.dest('js/'))
+	return gulp.src('src/js/**/*.js')
+	.pipe(uglify())
+	.pipe(rename({
+		suffix: '.min'
+	}))
+	.pipe(gulp.dest('dist/js/'))
 });
 
 // Watch files for changes
 gulp.task('watch', ['browser-sync'], function() {
-  // Watch HTML files
-  gulp.watch('*.html', reload);
-  // Watch Sass files
-  gulp.watch('scss/**/*', ['css', reload]);
-  // Watch jade files
-  gulp.watch('*.jade', ['jade']);
-  // Watch JS files
-  gulp.watch('scripts.js', ['cleanJs', 'js']);
+	gulp.watch('*.html', reload);
+	gulp.watch('*.scss', ['css', reload]);
+	gulp.watch('*.jade', ['jade']);
+	gulp.watch('*.js', ['js']);
 });
 
+// BrowserSync task
 gulp.task('browser-sync', function() {
-  browserSync.init(['css/*', 'js/*'], {
-    server: {
-      baseDir: ""
-    }
-  });
+	browserSync.init(['src/css/*', 'src/js/*'], {
+		server: {
+			baseDir: "dist/"
+		}
+	});
 });
 
 // Default task
-gulp.task('default', ['css', 'jade', 'cleanJs', 'js', 'watch', 'browser-sync']);
+gulp.task('default', ['css', 'jade', 'js', 'watch', 'browser-sync']);
