@@ -1,6 +1,3 @@
-$phone-width  : 660px;
-$tablet-width : 960px;
-
 $color-red    : #FF4747;
 $color-yellow : #FFEF4F;
 $color-blue   : #7AD1D1;
@@ -8,16 +5,6 @@ $color-blue   : #7AD1D1;
 
 body {
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
-	margin: 0px auto;
-	padding: 0 20px;
-	@media (min-width: $phone-width) {
-		width: $phone-width;
-		transition: .5s;
-	}
-	@media (min-width: $tablet-width) {
-		width: $tablet-width;
-		transition: .5s;
-	}
 }
 
 a {
@@ -63,13 +50,4 @@ main {
 	height: 4px;
 	position: absolute;
 	margin: 24px 0 0 0;
-}
-
-@-ms-viewport {
-  width: device-width;
-}
-
-footer {
-	width: 100%;
-	height: 80px;
 }
