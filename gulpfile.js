@@ -29,7 +29,7 @@ gulp.task('scss', function() {
 	return gulp.src(['src/scss/**/*.scss', '!src/scss/_/**/*.scss'])
 	.pipe(sass({ style: 'compressed', 
 		noCache: true,
-		includePaths: [ neat, 'src/scss/_/**/*.scss' ] }))
+		includePaths: neat}))
 	.pipe(autoprefixer())
 	.pipe(cssmin())
 	.pipe(rename({
