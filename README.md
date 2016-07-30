@@ -2,7 +2,7 @@
 I figured my portfolio needed a redesign and my projects needed more descriptions so I re-built it from scratch!
 
 ## Technologies Used
-Jade, SCSS, Greensock, Gulp & Node
+Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat
 
 ## Setup
  1. First make sure you have node and gulp installed `node -v` and `gulp -v` and if necessary install em!
@@ -12,6 +12,6 @@ Jade, SCSS, Greensock, Gulp & Node
  5. The site should open in your browser! If you have any questions or if anything is broken, [email me](mailto:hi@oskarradon.com)! 
 
 ## Some cool features:
- - Flexbox
+ - Neat grid!
  - Greensock animation
  - Probably going to refactor it to not use jQuery!
