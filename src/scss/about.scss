@@ -1,0 +1,38 @@
+@import "bourbon";
+@import "_/grid-settings";
+@import "neat";
+@import '_/global';
+
+main {
+	@include outer-container;
+	@include pad(0 10px 0 10px);
+	.about, img {
+		@include span-columns(12);
+		@include media($large-viewport) {
+			@include span-columns(6);
+		}
+	}
+	img {
+		@include media($large-viewport) {
+			@include shift(6);
+		}
+	}
+	.about {
+		@include media($small-viewport) {
+			p, h1 {                         // Not 100% on this styling
+				max-width: 450px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		@include media($large-viewport) {
+			@include shift(-12);
+		}
+	}
+	h1 {
+		@include media($large-viewport) {
+			margin-top: 0px;
+		}
+	}
+	
+}
