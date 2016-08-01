@@ -2,22 +2,22 @@
 
 // color variables
 
-$color-bg :
-$color1   : $color-blue;
-$color2   : blue;
-$color3   : blue;
-$color4   : blue;
-$color5   : blue;
+$color-bg : #1d1f21;
+$color1   : $color-red;
+$color2   : #FC9F5B;
+$color3   : #EDEDED;
+$color4   : $color-yellow;
+$color5   : #FC9F5B;
 $color6   : blue;
 $color7   : blue;
-$color8   : blue;
-$color9   : blue;
-$color10  : blue;
+$color8   : #FC9F5B;
+$color9   : $color-blue;
+$color10  : #79D879;
 $color11  : blue;
 $color12  : blue;
 $color13  : blue;
 $color14  : blue;
-$color15  : blue;
+$color15  : #FC9F5B;
 $color16  : blue;
 
 
@@ -53,7 +53,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #1d1f21;
+	background: $color-bg;
 }
 
 /* Inline code */
@@ -70,7 +70,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-	color: #c5c8c6;
+	color: $color3;
 }
 
 .namespace {
@@ -80,26 +80,26 @@ pre[class*="language-"] {
 .token.property,
 .token.keyword,
 .token.tag {
-    color: #96CBFE;
+    color: $color4;
 }
 
 .token.class-name {
-	color: #FFFFB6;
+	color: $color5;
 	text-decoration: underline;
 }
 
 .token.boolean,
 .token.constant {
-    color: #99CC99;
+    color: $color6;
 }
 
 .token.symbol,
 .token.deleted {
-	color: #f92672;
+	color: $color7;
 }
 
 .token.number {
-	color: #FF73FD;
+	color: $color8;
 }
 
 .token.selector,
@@ -108,47 +108,47 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #A8FF60;
+	color: $color9;
 }
 
 .token.variable {
-	color: #C6C5FE;
+	color: $color10;
 }
 
 .token.operator {
-    color: #EDEDED;
+    color: $color3;
 	background: none;
 }
 
 .token.entity {
-    color: #FFFFB6;
+    color: $color11;
     /* text-decoration: underline; */
 }
 
 .token.url {
-    color: #96CBFE;
+    color: $color12;
 }
 
 .language-css .token.string,
 .style .token.string {
-	color: #87C38A;
+	color: $color13;
 }
 
 .token.atrule,
 .token.attr-value {
-    color: #F9EE98;
+    color: $color14;
 }
 
 .token.function {
-	color: #DAD085;
+	color: $color15;
 }
 
 .token.regex {
-    color: #E9C062;
+    color: $color16;
 }
 
 .token.important {
-	color: #fd971f;
+	color: $color16;
 }
 
 .token.important,
