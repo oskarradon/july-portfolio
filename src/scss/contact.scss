@@ -1,0 +1,40 @@
+@import "bourbon";
+@import "_/grid-settings";
+@import "neat";
+@import '_/global';
+
+a {
+	text-decoration: none;
+}
+
+.email {
+	margin-top: 80px;
+	text-align: center;
+	&:hover {
+		color: $color-blue;
+		transition: .5s;
+	}
+}
+
+.icons {
+	width: 300px;
+	text-align: center;
+	margin: 40px auto;
+	a {
+		float: left;
+		margin: 0 20px;
+		&:hover .caption {
+			opacity: 1;
+			transition: 300ms;
+		}
+		img {
+			width: 50px;
+		}
+		.caption {
+			opacity: 0;
+			&:hover {
+				color: $color-blue;
+			}
+		}
+	}
+}
