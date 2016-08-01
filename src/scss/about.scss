@@ -1,39 +1,38 @@
+@import "bourbon";
+@import "_/grid-settings";
+@import "neat";
 @import '_/global';
 
-p {
-	padding-right: 30px;
-	min-width: 300px;
-	max-width: 70vw;
-	@media (min-width: $phone-width) {
-		float: left;
-		width: 300px;
+main {
+	@include outer-container;
+	@include pad(0 10px 0 10px);
+	.about, img {
+		@include span-columns(12);
+		@include media($large-viewport) {
+			@include span-columns(6);
+		}
 	}
-	@media (min-width: $tablet-width) {
-		width: 400px;
+	img {
+		@include media($large-viewport) {
+			@include shift(6);
+		}
 	}
-}
-
-.lead {
-	@media (min-width: $phone-width) {
-		margin: 60px 0 0;
-	} 
-}
-
-
-.about-img {
-	background: url("../assets/img/about-small.jpg") no-repeat;
-	background-size: contain;
-	width: calc( 100vw - 40px);
-	height: calc(calc( 100vw - 40px ) * 1.5);
-	@media (min-width: $phone-width) {
-		float: right;
-		max-width: 300px;
-		max-height: 450px;
+	.about {
+		@include media($small-viewport) {
+			p, h1 {                         // Not 100% on this styling
+				max-width: 450px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		@include media($large-viewport) {
+			@include shift(-12);
+		}
 	}
-	@media (min-width: $tablet-width) {
-		max-width: 450px;
-		max-height: 450px;
-		background-size: cover;
-		background-position: center;
+	h1 {
+		@include media($large-viewport) {
+			margin-top: 0px;
+		}
 	}
+	
 }

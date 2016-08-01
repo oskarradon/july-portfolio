@@ -1,40 +1,32 @@
+@import "bourbon";
+@import "_/grid-settings";
+@import "neat";
 @import '_/global';
 
-$project-sm : calc( 50vw - 30px);
-
-main {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	width: 100%;
-	margin: 0 auto;
+body {
+	margin: 0px;
+	padding: 0px;
 }
 
-.project {
-	width: $project-sm;
-	max-width: 300px;
-	float: left;
-	margin: 0 0 20px;
-	&:hover .title {
-		color: #FF4747;
-		transition: .2s;
-	}
-	.project-image {
-		background: #98D1D1;
-		width: $project-sm;
-		height: $project-sm;
-		max-width: 300px;
-		max-height: 300px;
-	}
-	.title {
-		height: 2em;
-		margin-bottom: 0px;
-		font-weight: normal;
-		font-size: 16px;
-		position: relative;
-		@media (min-width: $phone-width) {
-			font-size: 20px;
+main {
+	@include outer-container;
+	@include pad(0 10px 0 10px);
+	.project {
+		margin-bottom: 20px;
+		&:hover {
+			color: $color-red;
+			transition: .5s;
+		}
+		@include media($small-viewport) {
+    		@include span-columns(6);
+    		@include omega(2n);
+  		}
+  		@include media($large-viewport) {
+    		@include span-columns(4);
+    		@include omega(3n);
+  		}
+		img {
+			width: 100%;
 		}
 	}
 }
-

@@ -1,0 +1,9 @@
+$color-red    : #FF4747;
+$color-yellow : #FFEF4F;
+$color-blue   : #7AD1D1;
+
+$first-breakpoint-value: 400px;
+$second-breakpoint-value: 700px;
+
+$small-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
+$large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
