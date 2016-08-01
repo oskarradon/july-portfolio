@@ -1,0 +1,60 @@
+
+<html>
+  <head>
+    <title>Oskar Radon | About</title>
+    <link rel="stylesheet" href="css/vendor/normalize.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/about.min.css" type="text/css"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/img/cool.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  </head>
+  <body>
+    <header>
+      <h1>OSKAR RADON</h1>
+      <nav>
+        <div class="slider"></div><a href="about.html" class="about">ABOUT</a><a href="/" class="work">WORK</a><a href="contact.html" class="contact">CONTACT</a>
+      </nav>
+    </header>
+    <main>		
+      <p>This is a photography portfolio site I built for Portland-based artist Sarah Meadows. Her previous site was built with Indexhibit and wasn’t letting her upload images. I chose to rebuild it using Wordpress because of its support and popularity, and because I wanted to learn PHP and to build a theme for a CMS. I worked through the Treehouse course for building Wordpress Themes while prototyping, and the result is a site I am extremely proud of for its simplicity and individuality.</p>
+      <p>Throughout the process I was in contact with Sarah, clarifying her vision for the site and communicating about the stages of the process I was at. I sent her some preliminary ideas for the mobile version (mobile first!) that I sketched out and some preliminary ideas I whipped up in Sketch. </p>
+      <p>The first round of ideas played with the ideas I came up with on paper, finding ways of abstracting the simple grid layout that one is used to for a portfolio site, and experimenting with ways of displaying menu information. I think my favorite menu is the icons with text below, and since Sarah didn’t care for it I used the idea on my site! Also, in this first round I used only one font for the menu and used Sarah’s old logo to not distract from the layout. In hindsight I should have made simple wireframes and then developed them further into more complete mockups like these to not overwhelm my client with choices, but this was a learning process. And what I learned in the design and development of this site has helped me refine my processes and made me a better developer and designer.</p>
+      <p>After receiving some feedback, I went ahead with the scattered layout and designed three more mockups, this time playing with the size of the images on the home page, and how many would be visible. At this time I already had the idea that the site would be like the wall of an art gallery and the user could scroll left to right and up and down to view all of the images that would like to each of the projects, but another thing I neglected in this process was drawing out a sitemap, although I had a clear picture in my head of the user experience it’s always better to follow each of the steps of the design process. </p>
+      <p>Once I got more feedback from Sarah I moved ahead with the sparser scattered design. I created wireframes for the desktop site with varying colors, layouts of the nav and logo, background options, and hover events to display the title of the project. I also came up with a number of different palettes and logo options with different fonts and layouts. I sent Sarah the fonts and colors as they pertained to the header, and incorporated visualizations of the hover events. Again, I feel that I should have sent over fewer designs, but as I said before I learned a great deal from this project!</p>
+      <p>I chose Helvetica Neue because it is a web safe font on Macs, and because the capital letters were wide enough that the thin font weight didn’t look too sharp and pointed. I ended up balancing Helvetica Neue with Roboto Mono in bold italics (except in the navbar) because it seemed to ground the airy lightness with it’s weight and utilitarian feeling and because monospace fonts remind me of the command line. I enjoyed the way referentially it spoke to Helvetica Neue, which makes me think of simple mostly un-styled early websites in a similar way to Times New Roman. </p>
+      <p>My next step was to design a full-fidelity mockup which I turned into an interactive inVision prototype and sent to Sarah. I changed the hover effects to a neon-like glow for the nav and a drop shadow on the project pictures which both balance out the more digital feel of the font choices, and the natural imagery of the photography being displayed. After getting her approval I got started on the development!</p>
+      <p>For this site I used the Custom Post types UI and Advanced Custom Fields PRO plugins which were immensely helpful. I also used the fantastic Normalize.css stylesheet for making the site more consistent across multiple browsers. The particularly challenging aspects of the development of this site, after understanding the Wordpress site structure were styling the project links on the front page, and on each of the project pages the javascript to toggle enlarging the images and displaying their captions. The rest of the development was mostly fine-tuning the styling and a great deal of trial and error.</p>
+      <p>The front page was challenging because I needed a way of referring to each of the posts that wasn’t <?php the_title(); ?> . I knew I was going to have to style them exactly, and I wanted some variance in the spacing, so iterating over each of them and applying styles with javascript would have worked and perhaps been more elegant but I felt the need to separate my styling and scripting, which is ironic as I later used jQuery to add and remove styling to achieve the toggle effect. So I made a php variable that counted up from one for each post on the front page and used this as the project’s ID. Then in the stylesheet I gave each element absolute positioning and top and left values to align them on the page.</p>
+      <pre><code><?php
+$num_posts = ( is_front_page() ) ? 20 : -1;
+$args = array(
+	'post_type' => array ( 'portfolio', 'link' ),
+	'posts_per_page' => $num_posts
+);
+$query = new WP_Query( $args );
+$unique_id = 1;
+?>
+
+<main>
+	<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+	<?php if( get_post_type() == 'portfolio' ): ?>
+	<div id="post<?php echo $unique_id;?>" class="portfolio-item">
+	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('post-size'); ?></a>
+	<p class="post-title"><?php the_title(); ?></p>
+	</div>
+	<?php endif; ?>
+	…
+	<?php $unique_id++; ?>
+	<?php endwhile; endif; wp_reset_postdata(); ?>
+</main>
+
+</code></pre>
+      <p>The problem of toggling the image caption and resizing on the project page I accomplished using my good friend jQuery, more specifically the .toggle() and .css() methods. On the tablet and desktop sizes of the site clicking on one of the images shows the caption of the image by changing it’s opacity (I used this instead of display:none/block to avoid adding and removing bottom margins to account for the missing and showing captions), and enlarges the image by changing it’s width property. For projects that only have two images, I also had to change the width of the containing div to ensure the gallery would stay centered. The .active class is used to resize the gallery when no images are enlarged and to change the cursor to show the user that clicking again on the large image will have an effect.</p>
+      <p>The main challenges of this project were learning Wordpress’ structure and basic PHP, I had messed around with PHP before but never built a full project. I think learning by building something is the best way to solidify knowledge, and always leads to valuable tangents from learning the basics of a thing. I learned about the design process and how much to include the client, I learned how to budget my time and how long each step from design to development takes, and I challenged myself to design something that balanced the weird and the user-friendly, the analog, digital, and natural, and the result is a site that well represents an artist I greatly respect, and am proud to say that I built.</p>
+    </main>
+    <footer>
+      <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+      <script type="text/javascript" src="js/TweenMax.min.js"></script>
+      <script type="text/javascript" src="js/scripts.min.js"></script>
+    </footer>
+  </body>
+</html>
