@@ -2,7 +2,7 @@
 I figured my portfolio needed a redesign and my projects needed more descriptions so I re-built it from scratch!
 
 ## Technologies Used
-Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat
+Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat, Prismjs
 
 ## Setup
  1. First make sure you have node and gulp installed `node -v` and `gulp -v` and if necessary install em!
@@ -13,5 +13,6 @@ Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat
 
 ## Some cool features:
  - Neat grid!
- - Greensock animation
+ - Custom Prismjs theme!
+ - Greensock animation!
  - Probably going to refactor it to not use jQuery!
