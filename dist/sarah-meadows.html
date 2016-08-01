@@ -3,6 +3,7 @@
   <head>
     <title>Oskar Radon | About</title>
     <link rel="stylesheet" href="css/prism.css" type="text/css"/>
+    <link rel="stylesheet" href="css/prism-theme.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/about.min.css" type="text/css"/>
     <link rel="shortcut icon" type="image/png" href="/assets/img/cool.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -47,6 +48,23 @@
 &lt;/main&gt;
 </code></pre>
       <p>The problem of toggling the image caption and resizing on the project page I accomplished using my good friend jQuery, more specifically the .toggle() and .css() methods. On the tablet and desktop sizes of the site clicking on one of the images shows the caption of the image by changing it’s opacity (I used this instead of display:none/block to avoid adding and removing bottom margins to account for the missing and showing captions), and enlarges the image by changing it’s width property. For projects that only have two images, I also had to change the width of the containing div to ensure the gallery would stay centered. The .active class is used to resize the gallery when no images are enlarged and to change the cursor to show the user that clicking again on the large image will have an effect.</p>
+      <pre><code class="language-javascript">var windowWidth = $(window).innerWidth();&#10;
+if ( windowWidth &gt; 943 ) {
+&#9;$('.portfolio-image').toggle(function() {
+&#9;&#9;$(this).children('img').css({ 'width' : '400px' }).addClass('active');
+&#9;&#9;$(this).children('.image-caption').css({ 'opacity' : 1 , 'max-width' : '400px' });
+&#9;&#9;if ( $('.portfolio-gallery .portfolio-image').length === 2 ) {
+&#9;&#9;&#9;$('.portfolio-gallery').css({ 'width' : '920px' });
+&#9;&#9;}
+&#9;}, function () {
+&#9;&#9;$(this).children('img').css({ 'width' : '250px' }).removeClass('active');
+&#9;&#9;$(this).children('.image-caption').css({ 'opacity' : 0 , 'max-width' : '200px' });
+&#9;&#9;if ( !$('img').hasClass('active') ) {
+&#9;&#9;&#9;$('.portfolio-gallery').css({ 'width' : '635px' });
+&#9;&#9;}
+&#9;});
+}
+</code></pre>
       <p>The main challenges of this project were learning Wordpress’ structure and basic PHP, I had messed around with PHP before but never built a full project. I think learning by building something is the best way to solidify knowledge, and always leads to valuable tangents from learning the basics of a thing. I learned about the design process and how much to include the client, I learned how to budget my time and how long each step from design to development takes, and I challenged myself to design something that balanced the weird and the user-friendly, the analog, digital, and natural, and the result is a site that well represents an artist I greatly respect, and am proud to say that I built.</p>
     </main>
     <footer>
