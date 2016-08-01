@@ -3,14 +3,19 @@
 body {
 	font-family: $helvetica;
 	margin: 0px;
+	background: $color-off-white;
 }
 
 a {
-	color: black;
+	color: #1d1f21;
 	text-decoration: none;
 	&:visited {
-		color: black;
+		color: #1d1f21;
 	}
+}
+
+p, h1 {
+	color: #1d1f21;
 }
 
 p a {

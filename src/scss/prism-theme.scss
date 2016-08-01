@@ -2,11 +2,11 @@
 
 // color variables
 
-$color-bg : #1d1f21;
+$color-bg : $color-off-white;
 $color1   : $color-red;
 $color2   : #FC9F5B;
-$color3   : #EDEDED;
-$color4   : $color-yellow;
+$color3   : #1d1f21;
+$color4   : $color-blue;
 $color5   : #FC9F5B;
 $color6   : blue;
 $color7   : blue;
@@ -24,7 +24,6 @@ $color16  : blue;
 code[class*="language-"],
 pre[class*="language-"] {
 	color: $color1;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
 	direction: ltr;
 	text-align: left;
@@ -48,7 +47,7 @@ pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
-	border-radius: 0.3em;
+	border-radius: 0px;
 }
 
 :not(pre) > code[class*="language-"],
@@ -59,7 +58,7 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
 	padding: .1em;
-	border-radius: .3em;
+	border-radius: 0px;
 }
 
 .token.comment,
