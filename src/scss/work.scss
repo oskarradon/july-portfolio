@@ -1,0 +1,32 @@
+@import "bourbon";
+@import "_/grid-settings";
+@import "neat";
+@import '_/global';
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+main {
+	@include outer-container;
+	@include pad(0 10px 0 10px);
+	.project {
+		margin-bottom: 20px;
+		&:hover {
+			color: $color-red;
+			transition: .5s;
+		}
+		@include media($small-viewport) {
+    		@include span-columns(6);
+    		@include omega(2n);
+  		}
+  		@include media($large-viewport) {
+    		@include span-columns(4);
+    		@include omega(3n);
+  		}
+		img {
+			width: 100%;
+		}
+	}
+}
