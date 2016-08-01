@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Oskar Radon | About</title>
-    <link rel="stylesheet" href="css/vendor/normalize.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/prism.css" type="text/css"/>
     <link rel="stylesheet" href="css/about.min.css" type="text/css"/>
     <link rel="shortcut icon" type="image/png" href="/assets/img/cool.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -23,36 +23,35 @@
       <p>I chose Helvetica Neue because it is a web safe font on Macs, and because the capital letters were wide enough that the thin font weight didn’t look too sharp and pointed. I ended up balancing Helvetica Neue with Roboto Mono in bold italics (except in the navbar) because it seemed to ground the airy lightness with it’s weight and utilitarian feeling and because monospace fonts remind me of the command line. I enjoyed the way referentially it spoke to Helvetica Neue, which makes me think of simple mostly un-styled early websites in a similar way to Times New Roman. </p>
       <p>My next step was to design a full-fidelity mockup which I turned into an interactive inVision prototype and sent to Sarah. I changed the hover effects to a neon-like glow for the nav and a drop shadow on the project pictures which both balance out the more digital feel of the font choices, and the natural imagery of the photography being displayed. After getting her approval I got started on the development!</p>
       <p>For this site I used the Custom Post types UI and Advanced Custom Fields PRO plugins which were immensely helpful. I also used the fantastic Normalize.css stylesheet for making the site more consistent across multiple browsers. The particularly challenging aspects of the development of this site, after understanding the Wordpress site structure were styling the project links on the front page, and on each of the project pages the javascript to toggle enlarging the images and displaying their captions. The rest of the development was mostly fine-tuning the styling and a great deal of trial and error.</p>
-      <p>The front page was challenging because I needed a way of referring to each of the posts that wasn’t <?php the_title(); ?> . I knew I was going to have to style them exactly, and I wanted some variance in the spacing, so iterating over each of them and applying styles with javascript would have worked and perhaps been more elegant but I felt the need to separate my styling and scripting, which is ironic as I later used jQuery to add and remove styling to achieve the toggle effect. So I made a php variable that counted up from one for each post on the front page and used this as the project’s ID. Then in the stylesheet I gave each element absolute positioning and top and left values to align them on the page.</p>
-      <pre><code><?php
-$num_posts = ( is_front_page() ) ? 20 : -1;
-$args = array(
-	'post_type' => array ( 'portfolio', 'link' ),
-	'posts_per_page' => $num_posts
-);
-$query = new WP_Query( $args );
-$unique_id = 1;
-?>
-
-<main>
-	<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-	<?php if( get_post_type() == 'portfolio' ): ?>
-	<div id="post<?php echo $unique_id;?>" class="portfolio-item">
-	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('post-size'); ?></a>
-	<p class="post-title"><?php the_title(); ?></p>
-	</div>
-	<?php endif; ?>
-	…
-	<?php $unique_id++; ?>
-	<?php endwhile; endif; wp_reset_postdata(); ?>
-</main>
-
+      <p>The front page was challenging because I needed a way of referring to each of the posts that wasn’t &lt;?php the_title(); ?> . I knew I was going to have to style them exactly, and I wanted some variance in the spacing, so iterating over each of them and applying styles with javascript would have worked and perhaps been more elegant but I felt the need to separate my styling and scripting, which is ironic as I later used jQuery to add and remove styling to achieve the toggle effect. So I made a php variable that counted up from one for each post on the front page and used this as the project’s ID. Then in the stylesheet I gave each element absolute positioning and top and left values to align them on the page.</p>
+      <pre><code class="language-php">&lt;?php
+&#9;$num_posts = ( is_front_page() ) ? 20 : -1;
+&#9;$args = array(
+&#9;&#9;'post_type' =&gt; array ( 'portfolio', 'link' ),
+&#9;&#9;'posts_per_page' =&gt; $num_posts
+&#9;);
+&#9;$query = new WP_Query( $args );
+&#9;$unique_id = 1;
+?&gt;&#10;
+&lt;main&gt;
+&#9;&lt;?php if( $query-&gt;have_posts() ) : while( $query-&gt;have_posts() ) : $query-&gt;the_post(); ?&gt;
+&#9;&#9;&lt;?php if( get_post_type() == 'portfolio' ): ?&gt;
+&#9;&#9;&#9;&lt;div id="post&lt;?php echo $unique_id;?&gt;" class="portfolio-item"&gt;
+&#9;&#9;&#9;&lt;a href="&lt;?php the_permalink(); ?&gt;"&gt;&lt;?php the_post_thumbnail('post-size'); ?&gt;&lt;/a&gt;
+&#9;&#9;&#9;&lt;p class="post-title"&gt;&lt;?php the_title(); ?&gt;&lt;/p&gt;
+&#9;&#9;&lt;/div&gt;
+&#9;&#9;&lt;?php endif; ?&gt;
+&#9;&#9;…
+&#9;&#9;&lt;?php $unique_id++; ?&gt;
+&#9;&lt;?php endwhile; endif; wp_reset_postdata(); ?&gt;
+&lt;/main&gt;
 </code></pre>
       <p>The problem of toggling the image caption and resizing on the project page I accomplished using my good friend jQuery, more specifically the .toggle() and .css() methods. On the tablet and desktop sizes of the site clicking on one of the images shows the caption of the image by changing it’s opacity (I used this instead of display:none/block to avoid adding and removing bottom margins to account for the missing and showing captions), and enlarges the image by changing it’s width property. For projects that only have two images, I also had to change the width of the containing div to ensure the gallery would stay centered. The .active class is used to resize the gallery when no images are enlarged and to change the cursor to show the user that clicking again on the large image will have an effect.</p>
       <p>The main challenges of this project were learning Wordpress’ structure and basic PHP, I had messed around with PHP before but never built a full project. I think learning by building something is the best way to solidify knowledge, and always leads to valuable tangents from learning the basics of a thing. I learned about the design process and how much to include the client, I learned how to budget my time and how long each step from design to development takes, and I challenged myself to design something that balanced the weird and the user-friendly, the analog, digital, and natural, and the result is a site that well represents an artist I greatly respect, and am proud to say that I built.</p>
     </main>
     <footer>
       <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+      <script type="text/javascript" src="js/prism.js"></script>
       <script type="text/javascript" src="js/TweenMax.min.js"></script>
       <script type="text/javascript" src="js/scripts.min.js"></script>
     </footer>
