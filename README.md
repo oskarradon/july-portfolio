@@ -1,14 +1,17 @@
-# Bourbon Neat Jade SCSS Boilerplate
-This is a boilerplate for web projects using the Bourbon Neat grid framework, with SCSS, Jade, and a nice Gulp task to bring everything together.
+# Portfolio Site July Redesign
+I figured my portfolio needed a redesign and my projects needed more descriptions so I re-built it from scratch!
 
-## Explaination
-The project is split into `src` and `dist` directories, `src` for the unminified Js, jade, and SCSS, and `dist` for the minified, autoprefixed versions of your code, the HTML, and the `assets` folder for images, PDFs, etc.
+## Technologies Used
+Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat
 
-## Set-up Instructions
-1. Make sure you have node and gulp globally installed
-2. Install node packages: `npm install`
-3. Run the gulp task: `gulp` which spins up local dev server
-4. Go for it! Your changes to the `src/` folder should be compressed/compiled into the `dist/` folder and visible instantly thanks to browsersync :)
+## Setup
+ 1. First make sure you have node and gulp installed `node -v` and `gulp -v` and if necessary install em!
+ 2. Then download or clone this repository and navigate to it, for example `cd Sites/july-portfolio`
+ 3. Install the node modules: `npm install`
+ 4. Run the gulp task: `gulp`
+ 5. The site should open in your browser! If you have any questions or if anything is broken, [email me](mailto:hi@oskarradon.com)! 
 
-## License
-MIT License, share away! :)
+## Some cool features:
+ - Neat grid!
+ - Greensock animation
+ - Probably going to refactor it to not use jQuery!
