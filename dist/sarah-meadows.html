@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/prism.css" type="text/css"/>
     <link rel="stylesheet" href="css/prism-theme.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/project.min.css" type="text/css"/>
+    <link rel="stylesheet" href="slick/slick.css" type="text/css"/>
+    <link rel="stylesheet" href="slick/slick-theme.css" type="text/css"/>
     <link rel="shortcut icon" type="image/png" href="/assets/img/cool.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
@@ -17,21 +19,24 @@
     </header>
     <main>
       <section>
-        <h1 class="title">SARAH MEADOWS</h1>
-        <ul class="tags"> 
-          <li>DESIGN</li>
-          <li>WORDPRESS</li>
-          <li>PHP</li>
-          <li>SCSS</li>
-        </ul><img src="assets/img/sarah-meadows/main.jpg" alt="Main page of Sarah Meadows site"/>
+        <div class="intro">
+          <h1 class="title">SARAH MEADOWS</h1>
+          <ul class="tags"> 
+            <li>DESIGN</li>
+            <li>WORDPRESS</li>
+            <li>PHP</li>
+            <li>SCSS</li>
+          </ul>
+        </div><img src="assets/img/sarah-meadows/main.jpg" alt="Main page of Sarah Meadows site" class="img-lg"/>
       </section>
       <section class="text-block">
         <p>This is a photography portfolio site I built for Portland-based artist Sarah Meadows. Her previous site was built with Indexhibit and wasn’t letting her upload images. I chose to rebuild it using Wordpress because of its support and popularity, and because I wanted to learn PHP and to build a theme for a CMS. I worked through the Treehouse course for building Wordpress Themes while prototyping, and the result is a site I am extremely proud of for its simplicity and individuality.</p>
         <p>Throughout the process I was in contact with Sarah, clarifying her vision for the site and communicating about the stages of the process I was at. I sent her some preliminary ideas for the mobile version (mobile first!) that I sketched out and some preliminary ideas I whipped up in Sketch. </p>
       </section>
-      <section><img src="assets/img/sarah-meadows/0.jpg" alt="Preliminary sketch of Sarah Meadows site"/>
+      <section><img src="assets/img/sarah-meadows/0.jpg" alt="Preliminary sketch of Sarah Meadows site" class="img-lg"/>
         <p class="img-caption">Preliminary sketch with ideas for different layouts and logos. I think it's important to start with pencil on paper, as it allows for a more natural flow of ideas.</p>
       </section>
+      <section class="slick"><img src="assets/img/sarah-meadows/1.jpg"/><img src="assets/img/sarah-meadows/2.jpg"/><img src="assets/img/sarah-meadows/3.jpg"/><img src="assets/img/sarah-meadows/4.jpg"/><img src="assets/img/sarah-meadows/5.jpg"/></section>
       <section>
         <p>The first round of ideas played with the ideas I came up with on paper, finding ways of abstracting the simple grid layout that one is used to for a portfolio site, and experimenting with ways of displaying menu information. I think my favorite menu is the icons with text below, and since Sarah didn’t care for it I used the idea on my site! Also, in this first round I used only one font for the menu and used Sarah’s old logo to not distract from the layout. In hindsight I should have made simple wireframes and then developed them further into more complete mockups like these to not overwhelm my client with choices, but this was a learning process. And what I learned in the design and development of this site has helped me refine my processes and made me a better developer and designer.</p>
       </section>
@@ -100,6 +105,7 @@ if ( windowWidth &gt; 943 ) {
     <footer>
       <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
       <script type="text/javascript" src="js/prism.js"></script>
+      <script type="text/javascript" src="slick/slick.min.js"></script>
       <script type="text/javascript" src="js/TweenMax.min.js"></script>
       <script type="text/javascript" src="js/scripts.min.js"></script>
     </footer>
