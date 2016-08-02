@@ -3,9 +3,9 @@ html
 		title Oskar Radon | About
 		link(rel="stylesheet" href="css/prism.css" type="text/css")
 		link(rel="stylesheet" href="css/prism-theme.min.css" type="text/css")
+		link(rel="stylesheet" href="css/slick.min.css" type="text/css")
+		link(rel="stylesheet" href="css/slick-theme.min.css" type="text/css")
 		link(rel="stylesheet" href="css/project.min.css" type="text/css")
-		link(rel="stylesheet" href="slick/slick.css" type="text/css")
-		link(rel="stylesheet" href="slick/slick-theme.css" type="text/css")
 		link(rel="shortcut icon" type="image/png" href="/assets/img/cool.png")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 	body
@@ -42,12 +42,13 @@ html
 				img.img-lg(src="assets/img/sarah-meadows/0.jpg" alt="Preliminary sketch of Sarah Meadows site")
 				p.img-caption Preliminary sketch with ideas for different layouts and logos. I think it's important to start with pencil on paper, as it allows for a more natural flow of ideas.
 			
-			section.slick
-				img(src="assets/img/sarah-meadows/1.jpg")
-				img(src="assets/img/sarah-meadows/2.jpg")
-				img(src="assets/img/sarah-meadows/3.jpg")
-				img(src="assets/img/sarah-meadows/4.jpg")
-				img(src="assets/img/sarah-meadows/5.jpg")
+			section
+				div.slick
+					img(src="assets/img/sarah-meadows/1.jpg")
+					img(src="assets/img/sarah-meadows/2.jpg")
+					img(src="assets/img/sarah-meadows/3.jpg")
+					img(src="assets/img/sarah-meadows/4.jpg")
+					img(src="assets/img/sarah-meadows/5.jpg")
 
 
 			section
@@ -116,7 +117,7 @@ html
 		footer
 			script(type="text/javascript" src="js/jquery-1.12.4.min.js")
 			script(type="text/javascript" src="js/prism.js")
-			script(type="text/javascript" src="slick/slick.min.js")
+			script(type="text/javascript" src="js/slick.min.js")
 			script(type="text/javascript" src="js/TweenMax.min.js")
 			script(type="text/javascript" src="js/scripts.min.js")
 			
