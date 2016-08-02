@@ -1,8 +1,8 @@
 # Portfolio Site July Redesign
 I figured my portfolio needed a redesign and my projects needed more descriptions so I re-built it from scratch!
 
-## Technologies Used
-Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat, Prismjs
+## Technologies/Libraries Used
+Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat, Prismjs, Slick
 
 ## Setup
  1. First make sure you have node and gulp installed `node -v` and `gulp -v` and if necessary install em!
@@ -13,6 +13,6 @@ Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat, Prismjs
 
 ## Some cool features:
  - Neat grid!
- - Custom Prismjs theme!
- - Greensock animation!
- - Probably going to refactor it to not use jQuery!
+ - Custom Prismjs theme for <code> block syntax highlighting!
+ - Greensock animating navbar sliding div!
+ - Slick carousel with responsive breakpoints!
