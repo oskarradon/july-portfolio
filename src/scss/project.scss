@@ -3,6 +3,16 @@
 @import "neat";
 @import '_/global';
 
+.centered {
+	@include media($small-viewport) {
+		@include span-columns(12);
+	}
+	@include media($large-viewport) {
+		@include span-columns(8);
+		@include shift(2);
+	}
+}
+
 main {
 	@include outer-container();
 	@include pad(0 10px 0 10px);
@@ -26,13 +36,12 @@ main {
 			@include span-columns(12);
 		}
 		&.text-block {
-			@include media($small-viewport) {
-    			@include span-columns(12);
-  			}
-  			@include media($large-viewport) {
-    			@include span-columns(8);
-				@include shift(2);
-  			}
+			@extend .centered;
+		}
+		p.img-caption {
+			font-style: italic;
+			text-align: center;
+			@extend .centered;
 		}
 	}
 }
