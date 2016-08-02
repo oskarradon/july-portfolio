@@ -57,6 +57,7 @@ $(function() {
 	$('.slick').slick({
 		dots: true,
 		infinite: false,
+		arrows: false,
 		speed: 300,
 		slidesToShow: 4,
 		slidesToScroll: 4,
@@ -72,7 +73,7 @@ $(function() {
 			},
 			{
 				breakpoint: 800,
-				settings: {
+				settings: {					
 					slidesToShow: 2,
 					slidesToScroll: 2
 				}
