@@ -29,6 +29,17 @@ main {
 			margin-right: 30px;
 		}
 	}
+	h1 {
+		&.section-title {
+			@include span-columns(12);
+			// text-align: center;            ??????
+			margin: 0px auto 60px;
+		}
+		&.thanks {
+			@extend .section-title;
+			
+		}
+	}
 	section {
 		margin-bottom: 60px;
 		@include span-columns(12);
@@ -49,6 +60,9 @@ main {
 				height: auto;
   			}
 		}
+	}
+	pre {
+		@include span-columns(12);
 	}
 }
 
