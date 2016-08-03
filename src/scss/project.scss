@@ -16,28 +16,35 @@
 main {
 	@include outer-container();
 	@include pad(0 10px 0 10px);
-	.title {
-		margin-top: 0px;
+	.intro {
+		text-align: center;
+		.title {
+			margin: 0 0 10px;
+			font-weight: normal;
+			font-size: 36px;
+		}
 	}
-	.tags {
-		margin: 5px 0px 60px;
-		list-style: none;
-		padding: 0px;
-		li {
-			text-indent: none;
-			float: left;
-			margin-right: 30px;
+	.links {
+		width: 285px;
+		margin: 0 auto;
+		a p, a img {
+			display: inline-block;
+		}
+		.icon {
+			display: inline;
+			width: 30px;
 		}
 	}
 	h1 {
 		&.section-title {
 			@include span-columns(12);
-			// text-align: center;            ??????
+			text-align: center;
 			margin: 0px auto 60px;
+			font-weight: normal;
+			font-size: 36px;
 		}
 		&.thanks {
 			@extend .section-title;
-			
 		}
 	}
 	section {
