@@ -2,6 +2,7 @@
 @import "_/grid-settings";
 @import "neat";
 @import '_/global';
+@import '_/vars';
 
 .centered {
 	@include media($small-viewport) {
@@ -17,22 +18,50 @@ main {
 	@include outer-container();
 	@include pad(0 10px 0 10px);
 	.intro {
-		text-align: center;
 		.title {
-			margin: 0 0 10px;
 			font-weight: normal;
 			font-size: 36px;
 		}
+		.tags {
+			font-size: 16px;
+			font-weight: normal;
+		}
+		@include media($small-viewport) {
+			text-align: center;
+			.title {
+				margin: 0 0 10px;
+			}
+			.tags {
+				margin-bottom: 0px;
+			}
+		}
 	}
 	.links {
-		width: 285px;
-		margin: 0 auto;
+		a {
+			display: block;
+		}
 		a p, a img {
 			display: inline-block;
 		}
 		.icon {
 			display: inline;
-			width: 30px;
+			width: 23px;
+			margin-bottom: -5px;
+		}
+		a:hover p {
+			color: $color-red;
+			transition: .4s;
+		}
+		@include media($small-viewport) {
+			a {
+				text-align: center;
+				&:first-of-type p {
+					margin-top: 30px;	
+				}
+				&:nth-of-type(2n) p {
+					margin: 0 0 30px;
+				}
+			}
 		}
 	}
 	h1 {
