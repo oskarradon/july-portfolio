@@ -3,7 +3,7 @@ $color-yellow    : #FFEF4F;
 $color-blue      : #7AD1D1;
 $color-off-white : #f4f8fb;
 
-$first-breakpoint-value: 400px;
+$first-breakpoint-value: 0px;
 $second-breakpoint-value: 700px;
 
 $small-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
