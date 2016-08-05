@@ -18,13 +18,13 @@ p, h1 {
 	color: #1d1f21;
 }
 
-p a {
-	color: $color-red;
-	&:hover, &:active {
-		color: $color-blue;
-		transition: .5s;
-	}
-}
+// p a {
+// 	color: $color-red;
+// 	&:hover, &:active {
+// 		color: $color-blue;
+// 		transition: .5s;
+// 	}
+// }
 
 p {
 	font-size: 16px;

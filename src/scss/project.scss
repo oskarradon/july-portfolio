@@ -103,6 +103,13 @@ main {
 		}
 		&.text-block {
 			@extend .centered;
+			p a {
+				color: $color-red;
+				&:hover {
+					color: $color-blue;
+					transition: .3s;
+				}
+			}
 		}
 		p.img-caption {
 			font-style: italic;
