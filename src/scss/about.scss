@@ -9,7 +9,7 @@ main {
 	.about, img {
 		@include span-columns(12);
 		@include media($large-viewport) {
-			@include span-columns(6);
+			@include span-columns(5);
 		}
 	}
 	img {
@@ -21,7 +21,7 @@ main {
 		@include media($small-viewport) {
 		}
 		@include media($large-viewport) {
-			@include shift(-12);
+			@include shift(-11);
 		}
 	}
 	h1 {
