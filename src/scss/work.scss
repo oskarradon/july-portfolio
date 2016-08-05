@@ -12,7 +12,7 @@ main {
 	@include outer-container;
 	@include pad(0 10px 0 10px);
 	.project {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 		&:hover {
 			color: $color-red;
 			transition: .5s;
