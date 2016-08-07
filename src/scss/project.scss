@@ -101,6 +101,9 @@ main {
 		.img-lg {
 			@include span-columns(12);
 		}
+		.img-md {
+			@extend .centered;
+		}
 		&.text-block {
 			@extend .centered;
 			p a {
