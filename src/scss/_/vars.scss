@@ -6,7 +6,7 @@ $color-green     : #79D879;
 $color-black     : #1d1f21;
 $color-orange    : #FC9F5B;
 
-$first-breakpoint-value: 0px;
+$first-breakpoint-value: 1px;
 $second-breakpoint-value: 700px;
 
 $small-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
