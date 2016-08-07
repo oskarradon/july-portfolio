@@ -4,20 +4,20 @@
 
 $color-bg : $color-off-white;
 $color1   : $color-red;
-$color2   : #FC9F5B;
-$color3   : #1d1f21;
+$color2   : $color-orange;
+$color3   : $color-black;
 $color4   : $color-blue;
-$color5   : #FC9F5B;
+$color5   : $color-orange;
 $color6   : blue;
 $color7   : blue;
-$color8   : #FC9F5B;
+$color8   : $color-orange;
 $color9   : $color-blue;
-$color10  : #79D879;
+$color10  : $color-green;
 $color11  : blue;
 $color12  : blue;
 $color13  : blue;
 $color14  : blue;
-$color15  : #FC9F5B;
+$color15  : $color-orange;
 $color16  : blue;
 
 
@@ -65,7 +65,7 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #1d1f21;
+	color: $color-black;
 }
 
 .token.punctuation {
