@@ -57,31 +57,35 @@ $(function() {
 	})
 
 	// Initialize Slick carousel
-	$('.slick').slick({
-		dots: true,
-		infinite: false,
-		arrows: false,
-		autoplay: false,
-		autoplaySpeed: 2000,
-		speed: 300,
-		slidesToShow: 3,
-		slidesToScroll: 3,
-		responsive: [
-			{
-				breakpoint: 800,
-				settings: {					
-					slidesToShow: 2,
-					slidesToScroll: 2
+	var carousels = document.getElementsByClassName('slick');
+
+	for (element in carousels) {
+		element.slick({
+			dots: true,
+			infinite: false,
+			arrows: false,
+			autoplay: false,
+			autoplaySpeed: 2000,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			responsive: [
+				{
+					breakpoint: 800,
+					settings: {					
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 400,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
 				}
-			},
-			{
-				breakpoint: 400,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}
-		]
-	});
+			]
+		});
+	}
 	
 })
