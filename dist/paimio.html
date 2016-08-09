@@ -29,8 +29,59 @@
             <p>View the repository on GitHub</p></a></div><img src="assets/img/paimio-main.jpg" alt="Main page of Paimio site" class="img-lg"/>
       </section>
       <section class="text-block">
-        <p>Description coming soon...</p>
+        <p>This is a simple static site I was commissioned to create as a part of an art installation at the Paimio Sanatorium in Finland, a beautiful building designed by the Finnish architect, designer, and artist Alvar Aalto. I was given various poems, images, and related works to the installation and I created an experience I think of as a living poem.</p>
       </section>
+      <h1 class="section-title">IDEATION</h1>
+      <section><img src="assets/img/paimio-design.jpg" class="img-md"/>
+        <p class="img-caption">Preliminary sketches for the Paimio site along with notes on the interaction.</p>
+      </section>
+      <section class="text-block">
+        <p>For a while before this I had the idea of playing with the concept of pop-ups. One iteration of my design for my personal portfolio allowed the user to drag around and jumble up the images on the front page of my site. I determined that it didn’t make sense for that specific project, but when I was approached for this project I was immediately inspired to explore this idea further. </p>
+      </section>
+      <h1 class="section-title">DESIGN</h1>
+      <section class="text-block">
+        <p>The design choice to intersperse the poems and text fragments among the images and other files creates a sense of exploration, and the fact that the divs that pop up when a list item is clicked on are scattered about the page, sometimes overlapping, adds to that experience. It’s akin to a cluttered desktop, and the soothing, shifting colors of the background balance the unorganized nature of the pop-ups. My favorite part of this project is playing with the list as a way of organizing information while abstracting by involving the user in the ordering of the information by dragging the pop-ups around on the page.</p>
+        <p>One thing that would have been cool to add is the ability to join div elements when you drag them together, like fitting puzzle pieces together. I thought that this would be too complex and detract from the simplicity of the design so I’ll probably incorporate it into a later project.</p>
+      </section>
+      <h1 class="section-title">DEVELOPMENT</h1>
+      <section class="text-block">
+        <p>I could have used jQuery’s UI library to allow users to click and drag divs, but I found a much shorter <a href="http://stackoverflow.com/a/10980941/5767573">code snippet</a> on Stack Overflow and I implemented it instead. The part I am most proud of on this site, besides using <code class="language-css">.column-count()</code> for the main ul is the jQuery used to open and close the pop-up divs. </p>
+      </section>
+      <pre><code class="language-javascript">$(function() {&#10;
+&#9;var z = 10; // variable for z-index&#10;
+&#9;// Show popups when you click an li
+&#9;$('a').click(function(e) {
+&#9;&#9;var windowHeight = $(window).height();
+&#9;&#9;var windowWidth = $(window).width();
+&#9;&#9;var classname = $(this).attr('class');
+&#9;&#9;$('.popup.' + classname).show().css({
+&#9;&#9;&#9;'opacity' : 1,
+&#9;&#9;&#9;'z-index' : z,
+&#9;&#9;&#9;'left' : randomNumber(1, (windowWidth - 300)) + 'px',
+&#9;&#9;&#9;'top' : randomNumber(1, (windowHeight - 700)) + 'px'
+&#9;&#9;}).addClass('showing');
+&#9;&#9;z += 1;&#10;
+&#9;&#9;…&#10;
+&#9;&#9;// hide div when class matches x link class
+&#9;&#9;$('.x').click(function() {
+&#9;&#9;var classname = $(this).attr('class').split(' ')[1];
+&#9;&#9;$('.popup.' + classname).removeClass('showing').hide();
+&#9;&#9;$.each($('audio'), function () {
+&#9;&#9;&#9;this.pause();
+&#9;&#9;});
+&#9;});&#10;
+&#9;// close all 
+&#9;$('#closeAll').click(function() {
+&#9;&#9;$('.showing').removeClass('showing').hide();
+&#9;&#9;$('#closeAll').hide();
+&#9;});&#10;
+&#9;…&#10;
+});
+</code></pre>
+      <section class="text-block">
+        <p>This was one of my favorite projects I've had the opportunity to work on for the challenge to make an intriguing user experience while keeping the design simple and fun. I loved getting to experiment with fun CSS gradient animations and figuring out how to get the pop-ups to work, and I'm super proud of the outcome.</p>
+      </section>
+      <h1 class="section-title">THANKS FOR WATCHING!</h1>
     </main>
     <footer>
       <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
