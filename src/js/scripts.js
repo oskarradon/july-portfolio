@@ -1,4 +1,4 @@
-$(function() {
+
 
 	var animationDuration = 1;
 	var slider = $('.slider');
@@ -81,4 +81,3 @@ $(function() {
 		]
 	});
 	
-})
