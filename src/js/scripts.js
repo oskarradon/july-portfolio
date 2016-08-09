@@ -1,7 +1,7 @@
 $(function() {
 
 	var animationDuration = 1;
-	var slider = $('.slider');
+	var slider = document.getElementsByClassName('slider');
 	var easing = Power4.easeOut;
 
 	var colorRed = '#FF4747';
