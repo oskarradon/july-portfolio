@@ -13,6 +13,6 @@ Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat, Prismjs, Slick
 
 ## Some cool features:
  - Neat grid!
- - Custom Prismjs theme for <code> block syntax highlighting!
+ - Custom Prismjs theme for &lt;code&gt; block syntax highlighting!
  - Greensock animating navbar sliding div!
  - Slick carousel with responsive breakpoints!
