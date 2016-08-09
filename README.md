@@ -2,7 +2,7 @@
 I figured my portfolio needed a redesign and my projects needed more descriptions so I re-built it from scratch!
 
 ## Technologies/Libraries Used
-Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat, Prismjs, Slick
+Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat, Prismjs, Slick, jQuery
 
 ## Setup
  1. First make sure you have node and gulp installed `node -v` and `gulp -v` and if necessary install em!
