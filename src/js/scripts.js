@@ -38,7 +38,10 @@ $(function() {
 		 
 	// Animate nav slider on hover
 	document.getElementsByClassName('about')[0].addEventListener('mouseenter', function() {
-		alert('hi');
+		sliderAbout();
+	})
+	document.getElementsByClassName('about')[0].addEventListener('mouseleave', function() {
+		setSlider();
 	})
 
 	// $('.about').hover(function() {
