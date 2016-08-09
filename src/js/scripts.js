@@ -43,20 +43,16 @@ $(function() {
 	document.getElementsByClassName('about')[0].addEventListener('mouseleave', function() {
 		setSlider();
 	})
-
-	// $('.about').hover(function() {
-	// 	sliderAbout();
-	// }, function() {
-	// 	setSlider();
-	// })
-	$('.work').hover(function() {
+	document.getElementsByClassName('work')[0].addEventListener('mouseenter', function() {
 		sliderWork();
-	}, function() {
+	})
+	document.getElementsByClassName('work')[0].addEventListener('mouseleave', function() {
 		setSlider();
 	})
-	$('.contact').hover(function() {
+	document.getElementsByClassName('contact')[0].addEventListener('mouseenter', function() {
 		sliderContact();
-	}, function() {
+	})
+	document.getElementsByClassName('contact')[0].addEventListener('mouseleave', function() {
 		setSlider();
 	})
 
