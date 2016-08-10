@@ -38,36 +38,17 @@ setSlider();
 		
 // Animate nav slider on hover
 
-var navElements = ['about', 'work', 'contact'];
-var sliderFunctions = [sliderAbout(), sliderWork(), sliderContact()];
+var navElements = ['.about', '.work', '.contact'];
+var sliderFunctions = [sliderAbout, sliderWork, sliderContact];
 
-for (var i = 0; i <= navElements.length; i++) {
-	document.getElementsByClassName(navElements[i])[0].addEventListener('mouseenter', function() {
-		sliderFunctions[i];
+navElements.forEach(function(element, index) {
+	document.querySelector(element).addEventListener('mouseenter', function() {
+		sliderFunctions[index]();
 	})
-	document.getElementsByClassName(navElements[i])[0].addEventListener('mouseleave', function() {
+	document.querySelector(element).addEventListener('mouseleave', function() {
 		setSlider();
 	})
-}
-
-// document.getElementsByClassName('about')[0].addEventListener('mouseenter', function() {
-// 	sliderAbout();
-// })
-// document.getElementsByClassName('about')[0].addEventListener('mouseleave', function() {
-// 	setSlider();
-// })
-// document.getElementsByClassName('work')[0].addEventListener('mouseenter', function() {
-// 	sliderWork();
-// })
-// document.getElementsByClassName('work')[0].addEventListener('mouseleave', function() {
-// 	setSlider();
-// })
-// document.getElementsByClassName('contact')[0].addEventListener('mouseenter', function() {
-// 	sliderContact();
-// })
-// document.getElementsByClassName('contact')[0].addEventListener('mouseleave', function() {
-// 	setSlider();
-// })
+})
 
 // Initialize Slick carousel
 $('.slick').slick({
