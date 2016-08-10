@@ -41,9 +41,16 @@ setSlider();
 var navElements = ['.about', '.work', '.contact'];
 var sliderFunctions = [sliderAbout, sliderWork, sliderContact];
 
-navElements.forEach(function(element, index) {
-	document.querySelector(element).addEventListener('mouseenter', function() {
-		sliderFunctions[index]();
+var sliderEvents = [
+	{element: '.about', funct: sliderAbout},
+	{element: '.work', funct: sliderWork},
+	{element: '.contact', funct: sliderContact}
+];
+
+sliderEvents.forEach(function(event, index) {
+	document.querySelector(event.element).addEventListener('mouseenter', function() {
+		alert('hi');
+		event.funct[index]();
 	})
 	document.querySelector(element).addEventListener('mouseleave', function() {
 		setSlider();
