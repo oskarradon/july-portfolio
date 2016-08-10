@@ -49,10 +49,9 @@ var sliderEvents = [
 
 sliderEvents.forEach(function(event, index) {
 	document.querySelector(event.element).addEventListener('mouseenter', function() {
-		alert('hi');
-		event.funct[index]();
+		event[index].funct;
 	})
-	document.querySelector(element).addEventListener('mouseleave', function() {
+	document.querySelector(event.element).addEventListener('mouseleave', function() {
 		setSlider();
 	})
 })
