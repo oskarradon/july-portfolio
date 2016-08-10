@@ -28,3 +28,4 @@ Jade, SCSS, Greensock, Gulp & Node, Bourbon Neat, Prismjs, Slick, jQuery
  - [ ] Add image minification to Gulp task
  - [ ] Add sketchbook/blog section (???) Maybe a tumblr
  - [ ] Get Slick to work without jQuery
+ - [ ] SEO yo
