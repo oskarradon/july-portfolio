@@ -50,8 +50,8 @@ navElements.forEach(function(element, index) {
 	})
 })
 
+// Initialize Slick carousel
 if (document.querySelector('.slick')) {
-	// Initialize Slick carousel
 	$('.slick').slick({
 		dots: true,
 		infinite: false,
