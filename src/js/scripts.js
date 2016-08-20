@@ -44,11 +44,11 @@ var sliderFunctions = [sliderAbout, sliderWork, sliderContact];
 navElements.forEach(function(element, index) {
 	document.querySelector(element).addEventListener('mouseenter', function() {
 		sliderFunctions[index]();
-	})
+	});
 	document.querySelector(element).addEventListener('mouseleave', function() {
 		setSlider();
-	})
-})
+	});
+});
 
 // Initialize Slick carousel
 if (document.querySelector('.slick')) {
