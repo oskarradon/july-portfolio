@@ -25,19 +25,22 @@ main {
 		}
 	}
 	h1 {
-		font-size: 36px;
+		font-size: 30px;
 		font-weight: normal;
 		margin: 25px 0 0;
 		@include media($large-viewport) {
 			margin-top: 0px;
 		}
 	}
-	p a {
-		color: $color-red;
-		&:hover {
-			color: $color-blue;
-			transition: .3s;
-		}
+	p {
+		font-family: $georgia;
+		a {
+			color: $color-red;
+			&:hover {
+				color: $color-blue;
+				transition: .3s;
+			}
+	}
 	}
 	
 }
