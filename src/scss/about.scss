@@ -32,15 +32,11 @@ main {
 			margin-top: 0px;
 		}
 	}
-	p {
-		font-family: $georgia;
-		a {
-			color: $color-red;
-			&:hover {
-				color: $color-blue;
-				transition: .3s;
-			}
-	}
-	}
-	
+	p a {
+		color: $color-red;
+		&:hover {
+			color: $color-blue;
+			transition: .3s;
+		}
+	}	
 }
