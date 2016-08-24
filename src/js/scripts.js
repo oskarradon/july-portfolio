@@ -1,12 +1,18 @@
 
 // Variables
 var animationDuration = 1;
-var slider = document.getElementsByClassName('slider');
-var easing = Power4.easeOut;
+var slider            = document.getElementsByClassName('slider');
+var easing            = Power4.easeOut;
 
-var colorRed = '#FF4747';
-var colorGreen = '#79D879';
-var colorBlue = '#7AD1D1';
+var colorRed          = '#FF4747';
+var colorGreen        = '#79D879';
+var colorBlue         = '#7AD1D1';
+var ltRed             = '#FF6D6D';
+var ltYellow          = '#FFF268';
+var ltOrange          = '#FCAC74';
+var ltBlue            = '#95DBDB';
+var ltGreen           = '#8FD88F';
+var ltPurple          = '#B89DDB';
 
 // Slider animations
 function sliderAbout() {
@@ -84,27 +90,38 @@ var ctx = document.getElementById("skillsChart");
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
-        labels: ['Sketch', 'Photoshop', 'Illustrator', 'User Experience', 'JavaScript', 'Sass', 'Git', 'Jade', 'Gulp', 'jQuery', 'Angular 2', 'Ember', 'React', 'Node', 'WebPack'],
+        labels: [
+			'Sketch', 'Photoshop', 'Illustrator', 'UX Design', 
+			'Graphic Design', 'JavaScript', 'CSS', 'HTML',
+			'Git', 'Sass', 'Jade', 'TypeScript', 
+			'Gulp', 'WebPack', 'jQuery', 'GSAP', 
+			'Elm', 'Node', 'Angular 2', 'React', 'Ember'],
         datasets: [{
             label: 'Design',
-            data: [10, 8, 9, 9, 10, 9, 8, 9, 6, 7, 4, 5, 2, 3, 3, 0],
+            data: [10, 8, 9, 9, 10, 8, 10, 10, 9, 9, 8, 4, 6, 1, 9, 3, 1, 1, 5, 1, 7, 0],
             backgroundColor: [
-				'#ff4747',
-				'#FF6060',
-				'#FFEF4F',
-				'#7AD1D1',
-				'#79D879',
-				'#FC9F5B',
-				'#ff4747',
-				'#FF6060',
-				'#FFEF4F',
-				'#7AD1D1',
-				'#79D879',
-				'#ff4747',
-				'#FF6060',
-				'#FFEF4F',
-				'#7AD1D1',
-				'#79D879',],
+				ltOrange,
+				ltOrange,
+				ltOrange,
+				ltOrange,
+				ltOrange,
+				ltRed,
+				ltRed,
+				ltRed,
+				ltRed,
+				ltBlue,
+				ltBlue,
+				ltBlue,
+				ltGreen,
+				ltGreen,
+				ltGreen,
+				ltGreen,
+				ltGreen,
+				ltGreen,
+				ltPurple,
+				ltPurple,
+				ltPurple
+				],
         }]
     },
     options: {
