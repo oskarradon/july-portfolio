@@ -82,24 +82,56 @@ if (document.querySelector('.slick')) {
 
 var ctx = document.getElementById("skillsChart");
 var myChart = new Chart(ctx, {
-    type: 'radar',
+    type: 'horizontalBar',
     data: {
-        labels: ["Design", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ['Sketch', 'Photoshop', 'Illustrator', 'User Experience', 'JavaScript', 'Sass', 'Git', 'Jade', 'Gulp', 'jQuery', 'Angular 2', 'Ember', 'React', 'Node', 'WebPack'],
         datasets: [{
             label: 'Design',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: '#ff4747',
-            borderColor: '#ff4747',
-            borderWidth: 1
+            data: [10, 8, 9, 9, 10, 9, 8, 9, 6, 7, 4, 5, 2, 3, 3, 0],
+            backgroundColor: [
+				'#ff4747',
+				'#FF6060',
+				'#FFEF4F',
+				'#7AD1D1',
+				'#79D879',
+				'#FC9F5B',
+				'#ff4747',
+				'#FF6060',
+				'#FFEF4F',
+				'#7AD1D1',
+				'#79D879',
+				'#ff4747',
+				'#FF6060',
+				'#FFEF4F',
+				'#7AD1D1',
+				'#79D879',],
         }]
     },
     options: {
 		legend: {
 			display: false
 		},
-		scale: {
-			ticks: {
-				display: false
+		scales: {
+			xAxes: [{
+				gridLines: {
+					display: false
+				},
+				ticks: {
+					display: false
+				}
+			}],
+			yAxes: [{
+				gridLines: {
+					display: false
+				}
+			}]
+        },
+		tooltips: {
+			enabled: false
+		},
+		elements: {
+			point: {
+				radius: 0
 			}
 		}
 	}
