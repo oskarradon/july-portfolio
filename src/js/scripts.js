@@ -95,10 +95,10 @@ var myChart = new Chart(ctx, {
 			'Graphic Design', 'JavaScript', 'CSS', 'HTML',
 			'Git', 'Sass', 'Jade', 'TypeScript', 
 			'Gulp', 'WebPack', 'jQuery', 'GSAP', 
-			'Elm', 'Node', 'Angular 2', 'React', 'Ember'],
+			 'Node', 'Angular 2', 'React', 'Ember'],
         datasets: [{
             label: 'Design',
-            data: [10, 8, 9, 9, 10, 8, 10, 10, 9, 9, 8, 4, 6, 1, 9, 3, 1, 1, 5, 1, 7, 0],
+            data: [10, 8, 9, 9, 10, 8, 10, 10, 9, 9, 8, 4, 6, 1, 9, 3, 1, 5, 1, 7, 0],
             backgroundColor: [
 				ltOrange,
 				ltOrange,
@@ -112,7 +112,6 @@ var myChart = new Chart(ctx, {
 				ltBlue,
 				ltBlue,
 				ltBlue,
-				ltGreen,
 				ltGreen,
 				ltGreen,
 				ltGreen,
@@ -140,6 +139,11 @@ var myChart = new Chart(ctx, {
 			yAxes: [{
 				gridLines: {
 					display: false
+				},
+				scaleLabel: {
+					scaleTitle: {
+						fontColor: 'red'
+					}
 				}
 			}]
         },
