@@ -6,22 +6,29 @@
 main {
 	@include outer-container;
 	@include pad(0 10px 0 10px);
-	.about, img {
+	img {
 		@include span-columns(12);
 		@include media($large-viewport) {
-			@include span-columns(5);
-		}
-	}
-	img {
-		@include media($large-viewport) {
-			@include shift(7);
+			@include span-columns(6);
+			@include omega(2n);
 		}
 	}
 	.about {
-		@include media($small-viewport) {
+		@extend img;
+		p {
+			@include media($large-viewport) {
+				max-width: 450px;
+			}
 		}
-		@include media($large-viewport) {
-			@include shift(-12);
+	}
+	.skills {
+		@extend img;
+		margin-top: 60px;
+		canvas {
+			margin: 20px 0 60px;
+			@media (min-width: 1280px) {
+				margin-left: -105px;
+			}
 		}
 	}
 	h1 {
