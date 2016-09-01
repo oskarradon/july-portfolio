@@ -128,23 +128,21 @@ var myChart = new Chart(ctx, {
 			display: false
 		},
 		scales: {
+			scaleLabel: {
+				fontColor: '#ff4747'
+			},
 			xAxes: [{
 				gridLines: {
 					display: false
 				},
 				ticks: {
 					display: false
-				}
+				},
 			}],
 			yAxes: [{
 				gridLines: {
 					display: false
 				},
-				scaleLabel: {
-					scaleTitle: {
-						fontColor: 'red'
-					}
-				}
 			}]
         },
 		tooltips: {

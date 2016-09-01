@@ -23,6 +23,7 @@ main {
 	}
 	.skills {
 		@extend img;
+		// @include shift(6);
 		margin-top: 60px;
 		canvas {
 			margin: 20px 0 60px;
