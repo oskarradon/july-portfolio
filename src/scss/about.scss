@@ -21,17 +21,6 @@ main {
 			}
 		}
 	}
-	.skills {
-		@extend img;
-		// @include shift(6);
-		margin-top: 60px;
-		canvas {
-			margin: 20px 0 60px;
-			@media (min-width: 1280px) {
-				margin-left: -105px;
-			}
-		}
-	}
 	h1 {
 		font-size: 30px;
 		font-weight: normal;
