@@ -25,6 +25,7 @@ main {
 		.tags {
 			font-size: 16px;
 			font-weight: normal;
+			font-style: italic;
 		}
 		@include media($small-viewport) {
 			text-align: center;
@@ -112,7 +113,7 @@ main {
 					color: $color-blue;
 					transition: .3s;
 				}
-			}
+			}	 
 		}
 		p.img-caption {
 			font-style: italic;

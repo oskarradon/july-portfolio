@@ -3,11 +3,11 @@
 var gulp                    = require('gulp');
 var jade                    = require('gulp-jade');
 var sass                    = require('gulp-sass');
-var sourcemaps              = require('gulp-sourcemaps');
+// var sourcemaps              = require('gulp-sourcemaps');
 var autoprefixer            = require('gulp-autoprefixer');
 var cssmin                  = require('gulp-cssmin');
 var neat                    = require('node-neat').includePaths;
-var concat                  = require('gulp-concat');
+// var concat                  = require('gulp-concat');
 var uglify                  = require('gulp-uglify');
 var rename					= require('gulp-rename');
 var browserSync             = require('browser-sync');
@@ -20,7 +20,7 @@ var reload                  = browserSync.reload;
 gulp.task('jade', function() {
 	return gulp.src('src/jade/**/*.jade')
 	.pipe(jade({ pretty: true }))
-	.pipe(gulp.dest('dist/'))
+	.pipe(gulp.dest('dist/'));
 });
 
 
@@ -33,9 +33,9 @@ gulp.task('scss', function() {
 	.pipe(autoprefixer())
 	.pipe(cssmin())
 	.pipe(rename({
-        suffix: '.min'
-    }))
-	.pipe(gulp.dest('dist/css'))
+		suffix: '.min'
+	}))
+	.pipe(gulp.dest('dist/css'));
 });
 
 // JS task
@@ -45,7 +45,7 @@ gulp.task('js', function() {
 	.pipe(rename({
 		suffix: '.min'
 	}))
-	.pipe(gulp.dest('dist/js/'))
+	.pipe(gulp.dest('dist/js/'));
 });
 
 // Watch files for changes
@@ -60,7 +60,7 @@ gulp.task('watch', ['browser-sync'], function() {
 gulp.task('browser-sync', function() {
 	browserSync.init(['dist/css/**/*.css', 'dist/js/**/*.js'], {
 		server: {
-			baseDir: "dist/"
+			baseDir: 'dist/'
 		}
 	});
 });
