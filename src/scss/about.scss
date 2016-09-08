@@ -7,6 +7,7 @@ main {
 	@include outer-container;
 	@include pad(0 10px 0 10px);
 	img {
+		margin-bottom: 60px;
 		@include span-columns(12);
 		@include media($large-viewport) {
 			@include span-columns(6);
@@ -18,16 +19,6 @@ main {
 		p {
 			@include media($large-viewport) {
 				max-width: 450px;
-			}
-		}
-	}
-	.skills {
-		@extend img;
-		margin-top: 60px;
-		canvas {
-			margin: 20px 0 60px;
-			@media (min-width: 1280px) {
-				margin-left: -105px;
 			}
 		}
 	}
