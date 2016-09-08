@@ -1,0 +1,12 @@
+ - [Lazy loading images](https://css-tricks.com/snippets/javascript/lazy-loading-images/)
+ - SVG swirl animations triggered on scroll events
+ - &lt;section&gt; load animation on scroll
+ - GitHub API integration to show # of commits on project repo
+ - Add more project descriptions / projects
+ - Skills section on About page
+ - Add image minification to Gulp task
+ - Add sketchbook/blog section (???) Maybe a tumblr
+ - Remove Slick
+ - Animate slider with CSS not GSAP
+ - SEO yo
+ - Loading animations for pages?
