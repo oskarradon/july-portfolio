@@ -9,7 +9,8 @@ var cssmin                  = require('gulp-cssmin');
 var neat                    = require('node-neat').includePaths;
 // var concat                  = require('gulp-concat');
 var uglify                  = require('gulp-uglify');
-var rename					= require('gulp-rename');
+var rename					        = require('gulp-rename');
+var imagemin                = require('gulp-imagemin');
 var browserSync             = require('browser-sync');
 var reload                  = browserSync.reload;
 
@@ -48,12 +49,21 @@ gulp.task('js', function() {
 	.pipe(gulp.dest('dist/js/'));
 });
 
+// Img task
+gulp.task('img', function() {
+	return gulp.src('src/img/**/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('dist/assets/img'));
+});
+
+
 // Watch files for changes
 gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('dist/**/*.html', reload);
 	gulp.watch('src/scss/**/*.scss', ['scss', reload]);
 	gulp.watch('src/jade/**/*.jade', ['jade']);
 	gulp.watch('src/js/**/*.js', ['js']);
+	gulp.watch('src/img/**/*', ['img']);
 });
 
 // Spin up development server
@@ -66,4 +76,4 @@ gulp.task('browser-sync', function() {
 });
 
 // Default task
-gulp.task('default', ['scss', 'jade', 'js', 'watch', 'browser-sync']);
+gulp.task('default', ['scss', 'jade', 'js', 'watch', 'img', 'browser-sync']);
